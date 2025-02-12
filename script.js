@@ -6,25 +6,29 @@ function addTodo() {
   if (!inputEl.value.trim()) {
     return 0;
   }
+
+  var curC = c;
+
   const textNode = document.createElement("div");
   textNode.classList.add("newTodo");
+  textNode.id = "textNode" + curC;
 
   const todoCon = document.createElement("div");
-  todoCon.classList.add("todoCon");
+  todoCon.classList.add("todo" + curC, "todoCon");
 
   const icon = document.createElement("i");
-  icon.classList.add("fa-regular", "fa-circle", "icon");
+  icon.classList.add("fa-regular", "fa-circle", "icon" + curC);
   icon.onclick = function () {
-    delTodo();
+    delTodo(curC);
   };
 
   const line = document.createElement("hr");
   line.classList.add("line");
 
   const textPara = document.createElement("p");
-  textPara.classList.add("todo" + c, "todoCommon");
+  textPara.classList.add("todoCommon");
+  textPara.id = "todoNotCom" + c;
   textPara.textContent = inputEl.value;
-  c++;
 
   todoCon.appendChild(icon);
   todoCon.appendChild(textPara);
@@ -36,6 +40,7 @@ function addTodo() {
   const parentEl = document.getElementById("allTodo");
   parentEl.appendChild(textNode);
 
+  c++;
   inputEl.value = "";
 }
 
@@ -45,4 +50,13 @@ document.getElementById("inp").addEventListener("keypress", function (event) {
   }
 });
 
-function delTodo() {}
+function delTodo(c) {
+  const inputID = document.getElementById("textNode" + c);
+  const textID = document.getElementById("todoNotCom" + c);
+
+  textID.classList.add("todoTextStrike");
+
+  setTimeout(() => {
+    inputID.parentNode.removeChild(inputID);
+  }, 800);
+}

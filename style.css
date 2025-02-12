@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  font: 1em serif;
 }
 
 .heading {
@@ -16,7 +17,7 @@ body {
 }
 
 .line {
-  opacity: 50%;
+  opacity: 20%;
 }
 
 .todo {
@@ -46,7 +47,7 @@ body {
 }
 
 .fa-regular {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .newTodo p {
@@ -60,4 +61,35 @@ body {
 
 .todoCommon {
   padding-top: 3px;
+}
+
+i.fa-circle:hover::before {
+  content: "\f111";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: black;
+}
+
+@keyframes strikethrough {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.todoTextStrike {
+  position: relative;
+}
+
+.todoTextStrike::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  animation: strikethrough 0.5s ease-in forwards;
 }
