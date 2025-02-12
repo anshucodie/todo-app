@@ -3,6 +3,7 @@ body {
   justify-content: center;
   margin-top: 30px;
   font: 1em serif;
+  background-color: hsl(77, 100%, 99%);
 }
 
 .heading {
@@ -20,12 +21,20 @@ body {
   opacity: 20%;
 }
 
+.addIcon {
+  cursor: pointer;
+}
+
 .todo {
   margin-top: 15px;
 }
 
 .addTodo {
   margin-top: 10px;
+}
+
+#inp::placeholder {
+  background-color: hsl(77, 100%, 99%);
 }
 
 #inp {

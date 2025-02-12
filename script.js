@@ -27,6 +27,10 @@ function addTodo() {
 
   const textPara = document.createElement("p");
   textPara.classList.add("todoCommon");
+  textPara.onclick = function () {
+    editTodo(curC);
+  };
+
   textPara.id = "todoNotCom" + c;
   textPara.textContent = inputEl.value;
 
