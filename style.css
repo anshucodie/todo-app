@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.line {
+  opacity: 50%;
+}
+
+.addIcon {
+}
+
+.todo {
+  margin-top: 15px;
+}
+
+#inp {
+  outline: none;
+  border: none;
+  opacity: 50%;
+}
+
+#inp:focus {
+  outline: none;
+  border: none;
+  opacity: 100%;
+}
