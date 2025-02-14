@@ -1,24 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
   font: 1em serif;
   background-color: hsl(77, 100%, 99%);
 }
 
 .heading {
+  font-size: 30px;
   display: flex;
   justify-content: center;
-  font-size: 25px;
+  margin-top: 50px;
+}
+
+.todoList {
+  margin-top: 35px;
 }
 
 #container {
+  background-color: lightblue;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url(/bg.png);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blurBG {
+  /* background-color: aqua; */
+  background: rgba(238, 238, 238, 0.2);
+  padding: 10px 40px 40px 40px;
+  margin-top: 20px;
+  min-height: 90vh;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 15px;
+  border: 0.1em solid rgb(93, 93, 93, 0.35);
+}
+
+.todo {
   width: 100%;
   max-width: 450px;
+  position: absolute;
+  height: 100%;
 }
 
 .line {
-  opacity: 20%;
+  opacity: 35%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .addIcon {
@@ -30,11 +69,11 @@ body {
 }
 
 .addTodo {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #inp::placeholder {
-  background-color: hsl(77, 100%, 99%);
+  background-color: rgb(193, 128, 128);
 }
 
 #inp {
@@ -42,6 +81,8 @@ body {
   border: none;
   opacity: 50%;
   cursor: text;
+  /* font-family: serif; */
+  margin-left: 5px;
 }
 
 #inp:focus {

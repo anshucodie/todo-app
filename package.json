@@ -1,0 +1,21 @@
+{
+  "name": "todo-dom",
+  "version": "1.0.0",
+  "description": "made a todo app using DOM and js",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshucodie/todo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anshucodie/todo-app/issues"
+  },
+  "homepage": "https://github.com/anshucodie/todo-app#readme"
+}

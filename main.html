@@ -12,19 +12,25 @@
   </head>
   <body>
     <div id="container">
-      <div class="heading">
-        <h1 id="header">ToDo</h1>
-      </div>
-      <h3>Today</h3>
-      <hr class="line" />
-      <div id="todo">
-        <div id="allTodo"></div>
-        <div class="addTodo">
-          <i onclick="addTodo()" class="fa-solid fa-plus addIcon"></i>
-          <input id="inp" type="text" placeholder="Add ToDo" />
+      <div class="todo">
+        <div class="blurBG">
+          <div class="heading">
+            <h1 id="header">ToDo</h1>
+          </div>
+          <div class="todoList">
+            <h3>Today</h3>
+            <hr class="line" />
+            <div id="todo">
+              <div id="allTodo"></div>
+              <div class="addTodo">
+                <i onclick="addTodo()" class="fa-solid fa-plus addIcon"></i>
+                <input id="inp" type="text" placeholder="Add ToDo" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <script src="/script.js"></script>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
