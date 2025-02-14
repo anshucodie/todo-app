@@ -17,7 +17,7 @@ function addTodo() {
   todoCon.classList.add("todo" + curC, "todoCon");
 
   const icon = document.createElement("i");
-  icon.classList.add("fa-regular", "fa-circle", "icon" + curC);
+  icon.classList.add("fa-regular", "fa-circle", "icon" + curC, "iconCom");
   icon.onclick = function () {
     delTodo(curC);
   };

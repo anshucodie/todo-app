@@ -7,7 +7,7 @@
 body {
   display: flex;
   justify-content: center;
-  font: 1em serif;
+  font-family: "Trebuchet MS", sans-serif;
   background-color: hsl(77, 100%, 99%);
 }
 
@@ -36,7 +36,6 @@ body {
 }
 
 .blurBG {
-  /* background-color: aqua; */
   background: rgba(238, 238, 238, 0.2);
   padding: 10px 40px 40px 40px;
   margin-top: 20px;
@@ -62,6 +61,8 @@ body {
 
 .addIcon {
   cursor: pointer;
+  color: #666;
+  margin-right: 8px;
 }
 
 .todo {
@@ -69,25 +70,33 @@ body {
 }
 
 .addTodo {
-  margin-top: 20px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  background: rgba(238, 238, 238, 0.4);
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: background 0.2s ease-in-out;
 }
 
-#inp::placeholder {
-  background-color: rgb(193, 128, 128);
+.addTodo:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #inp {
-  outline: none;
+  font-family: "Trebuchet MS", sans-serif;
+  background: transparent;
   border: none;
   opacity: 50%;
   cursor: text;
-  /* font-family: serif; */
-  margin-left: 5px;
+  width: 100%;
+  font-size: 13px;
+  color: #333;
 }
 
 #inp:focus {
   outline: none;
-  border: none;
   opacity: 100%;
 }
 
@@ -102,15 +111,14 @@ body {
 
 .newTodo p {
   align-self: center;
-  margin-left: 8px;
+  margin-left: 9px;
 }
 
 .newTodo i {
   align-self: center;
-}
-
-.todoCommon {
-  padding-top: 3px;
+  margin-left: 12px;
+  width: 14px;
+  height: 14px;
 }
 
 i.fa-circle:hover::before {
@@ -142,4 +150,8 @@ i.fa-circle:hover::before {
   height: 2px;
   background: black;
   animation: strikethrough 0.5s ease-in forwards;
+}
+
+.todoCommon {
+  font-size: 14px;
 }
